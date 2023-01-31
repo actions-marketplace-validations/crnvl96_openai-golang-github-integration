@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/crnvl96/openai-code-review/githubClient"
@@ -11,7 +10,6 @@ import (
 
 
 func main() {
-	fmt.Println(parser.ArgParser(os.Args))
 	args := parser.ArgParser(os.Args)
 	openai_api_key := args[0]
 	github_token := args[1]
