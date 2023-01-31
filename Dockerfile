@@ -6,4 +6,4 @@ RUN go mod download
 COPY . .
 RUN go build
 RUN chmod 777 script.sh
-ENTRYPOINT ["/bin/sh", "./script.sh"]
+ENTRYPOINT ["/bin/sh", "./app/script.sh"]
