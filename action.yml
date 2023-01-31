@@ -1,5 +1,5 @@
 
-name: openai automated code review
+name: AI code review
 description: 'Integration of github actions with ChatGPT, aiming automated code reviews'
 inputs:
   openai_api_key:
