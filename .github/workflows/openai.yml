@@ -7,7 +7,7 @@ jobs:
     name: openai code review
     steps:
       - name: openai
-        uses: crnvl96/openai-golang-github-integration@1.0.5
+        uses: crnvl96/openai-golang-github-integration@1.0.6
         with:
           openai_api_key: ${{ secrets.openai_api_key }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
