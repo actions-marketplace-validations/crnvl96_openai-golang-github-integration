@@ -5,4 +5,4 @@ COPY . .
 RUN go mod download
 RUN go build .
 RUN chmod +x main.sh
-ENTRYPOINT ["./main.sh"]
+ENTRYPOINT ["./app/main.sh"]
