@@ -5,15 +5,13 @@ import (
 
 	"github.com/crnvl96/openai-code-review/githubClient"
 	"github.com/crnvl96/openai-code-review/gptClient"
-	"github.com/crnvl96/openai-code-review/parser"
 )
 
 
 func main() {
-	args := parser.ArgParser(os.Args)
-	openai_api_key := args[0]
-	github_token := args[1]
-	github_pr_id := args[2]
+	openai_api_key := os.Getenv("OPENAI_API_KEY")
+	github_token := os.Getenv("GITHUB_TOKEN")
+	github_pr_id := os.Getenv("GITHUB_PR_ID")
 
 	client, context := githubClient.GenerateClient(github_token)
 
