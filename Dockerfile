@@ -1,9 +1,9 @@
 FROM golang:1.19-alpine3.16
 
 WORKDIR /app
-COPY . .
+COPY go.mod .
 RUN go mod download
-RUN go build .
-COPY ./main.sh .
+COPY . .
+RUN go build
 RUN chmod +x main.sh
-ENTRYPOINT ["/bin/sh", "/app/main.sh"]
+ENTRYPOINT ["/bin/sh", "main.sh"]
