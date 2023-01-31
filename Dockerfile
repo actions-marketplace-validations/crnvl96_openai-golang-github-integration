@@ -5,6 +5,5 @@ COPY go.mod .
 RUN go mod download
 COPY . .
 RUN go build
-RUN chmod +x main.sh
-RUN ls
-ENTRYPOINT ["/bin/sh", "main.sh"]
+RUN chmod 777 script.sh
+ENTRYPOINT ["/bin/sh", "./script.sh"]
