@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/crnvl96/githubClient"
-	"github.com/crnvl96/gptClient"
-	"github.com/crnvl96/parser"
+	"github.com/crnvl96/openai-code-review/githubClient"
+	"github.com/crnvl96/openai-code-review/gptClient"
+	"github.com/crnvl96/openai-code-review/parser"
 )
 
 
