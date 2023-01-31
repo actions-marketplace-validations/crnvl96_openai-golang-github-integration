@@ -3,4 +3,4 @@ FROM golang:latest
 WORKDIR /app
 COPY . .
 RUN go mod download
-CMD ["go", "run", "./main.go"]
+CMD ["/bin/sh", "go", "run", "./main.go"]
