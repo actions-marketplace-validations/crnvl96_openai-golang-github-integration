@@ -4,4 +4,5 @@ WORKDIR /app
 COPY . .
 RUN go mod download
 RUN go build .
-CMD ["/main.sh"]
+RUN chmod +x main.sh
+ENTRYPOINT ["./main.sh"]
