@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: openai
         uses: crnvl96/openai-golang-github-integration@1.0.15
+        env:
+          OPENAI_API_KEY: ${{ secrets.openai_api_key }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_PR_ID: ${{ github.event.number }}
         with:
           openai_api_key: ${{ secrets.openai_api_key }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
